@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:package_info/package_info.dart';
+//import 'package:package_info/package_info.dart';
 
 class Utility {
   static String convertTimeStampToDate(int timestamp) {
@@ -87,36 +87,10 @@ class Utility {
   }
 
   static Future<String> getAppVersion() async {
-    PackageInfo packageInfo = await PackageInfo.fromPlatform();
-    return packageInfo.version;
+    // PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    // return packageInfo.version;
   }
 
-//  static changeStatusColor(Color color) async {
-//    try {
-//      await FlutterStatusbarcolor.setStatusBarColor(color, animate: true);
-//      if (useWhiteForeground(color)) {
-//        FlutterStatusbarcolor.setStatusBarWhiteForeground(true);
-//        FlutterStatusbarcolor.setNavigationBarWhiteForeground(true);
-////        _useWhiteStatusBarForeground = true;
-////        _useWhiteNavigationBarForeground = true;
-//      } else {
-//        FlutterStatusbarcolor.setStatusBarWhiteForeground(false);
-//        FlutterStatusbarcolor.setNavigationBarWhiteForeground(false);
-////        _useWhiteStatusBarForeground = false;
-////        _useWhiteNavigationBarForeground = false;
-//      }
-//    } on Exception catch (e) {
-//      debugPrint(e.toString());
-//    }
-//  }
-
-//  static changeNavigationColor(Color color) async {
-//    try {
-//      await FlutterStatusbarcolor.setNavigationBarColor(color, animate: true);
-//    } on Exception catch (e) {
-//      debugPrint(e.toString());
-//    }
-//  }
 
   static String formatMinutes(int minute) {
     if (minute.toString().length >= 2) {

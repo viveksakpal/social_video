@@ -22,8 +22,10 @@ class ActionsToolbar extends StatelessWidget {
   final String numLikes;
   final String numComments;
   final String userPic;
+  final String shareCount;
 
-  ActionsToolbar(this.numLikes, this.numComments, this.userPic);
+  ActionsToolbar(
+      this.numLikes, this.numComments, this.userPic, this.shareCount);
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +36,7 @@ class ActionsToolbar extends StatelessWidget {
         _getSocialAction(icon: TikTokIcons.heart, title: numLikes),
         _getSocialAction(icon: TikTokIcons.chat_bubble, title: numComments),
         _getSocialAction(
-            icon: TikTokIcons.reply, title: 'Share', isShare: true),
+            icon: TikTokIcons.reply, title: shareCount, isShare: true),
         CircleImageAnimation(
           child: _getMusicPlayerAction(userPic),
         )
@@ -52,7 +54,7 @@ class ActionsToolbar extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(top: isShare ? 5.0 : 2.0),
             child:
-                Text(title, style: TextStyle(fontSize: isShare ? 10.0 : 12.0)),
+                Text(title, style: TextStyle(fontSize: 12.0)),
           )
         ]));
   }

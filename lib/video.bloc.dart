@@ -39,6 +39,7 @@ class VideosBloc {
     loadVideos();
   }
 
+
   // ignore: close_sinks
   final BehaviorSubject<List<Pinkdata>> _listVideosController =
       new BehaviorSubject<List<Pinkdata>>.seeded(List<Pinkdata>());

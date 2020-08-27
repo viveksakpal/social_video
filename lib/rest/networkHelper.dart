@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:io' show Platform;
 
-import 'package:alice/alice.dart';
+//import 'package:alice/alice.dart';
 import 'package:dio/dio.dart';
 import 'package:dio/dio.dart' as prefix0;
 import 'package:flutter/widgets.dart';
@@ -9,7 +9,7 @@ import 'urlConstants.dart';
 import 'utility.dart';
 
 class NetworkHelper {
-  static Alice alice;
+  //static Alice alice;
   static Dio dio;
   NetworkHelper() {
     initAliceAndDio();
@@ -146,8 +146,9 @@ class NetworkHelper {
 
   static void initAliceAndDio() {
     if (dio == null) {
-      alice = Alice(showNotification: true,showInspectorOnShake: true,
-          navigatorKey: GlobalKey<NavigatorState>(debugLabel: "Alice"));
+      //alice = Alice(showNotification: true,showInspectorOnShake: true,
+      navigatorKey:
+      GlobalKey<NavigatorState>(debugLabel: "Alice");
       dio = new Dio();
       dio.interceptors
           .add(InterceptorsWrapper(onRequest: (RequestOptions options) {
@@ -169,7 +170,7 @@ class NetworkHelper {
         compact: false,
       ));
        */
-      dio.interceptors.add(alice.getDioInterceptor());
+      //dio.interceptors.add(alice.getDioInterceptor());
     }
   }
 }

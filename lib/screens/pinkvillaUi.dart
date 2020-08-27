@@ -103,19 +103,17 @@ class _PinkvillaMainState extends State<PinkvillaMain> {
             )
         ) : Column(mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
-          LinearProgressIndicator(),
-          SizedBox(height: 56,)
+          LinearProgressIndicator()
         ],),
         Column(mainAxisAlignment: MainAxisAlignment.end, children: <Widget>[
           Row(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
-               VideoDescription(video.user.name.toString(),video.title.toString()),
-               ActionsToolbar(video.likeCount.toString(),video.commentCount.toString(),video.user.headshot),
+               VideoDescription(video.user.name.toString(),video.title.toString(),'Song Title'),
+               ActionsToolbar(video.likeCount.toString(),video.commentCount.toString(),video.user.headshot,video.shareCount.toString()),
               ],
-          ),
-          SizedBox(height: 65)
+          )
         ],)
       ],
     );
