@@ -23,7 +23,7 @@ class ActionsToolbar extends StatelessWidget {
   final String numComments;
   final String userPic;
 
-  ActionsToolbar({this.numLikes, this.numComments, this.userPic});
+  ActionsToolbar(this.numLikes, this.numComments, this.userPic);
 
   @override
   Widget build(BuildContext context) {

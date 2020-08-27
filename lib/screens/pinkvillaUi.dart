@@ -22,27 +22,27 @@ class _PinkvillaMainState extends State<PinkvillaMain> {
   @override
   void initState() {
     super.initState();
-    _videosBloc = VideosBloc(VideosAPI());
+    _videosBloc = VideosBloc(VideoAPI());
      listVideos = _videosBloc.listVideos;
   }
 
-  Widget get topSection => Container(
-      height: 100.0,
-      padding: EdgeInsets.only(bottom: 15.0),
-      alignment: Alignment(0.0, 1.0),
-      child: Row(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            Text('Following'),
-            Container(
-              width: 15.0,
-            ),
-            Text('For you',
-                style: TextStyle(
-                    fontSize: 17.0, fontWeight: FontWeight.bold))
-          ]),
-    );
+  // Widget get topSection => Container(
+  //     height: 100.0,
+  //     padding: EdgeInsets.only(bottom: 15.0),
+  //     alignment: Alignment(0.0, 1.0),
+  //     child: Row(
+  //         crossAxisAlignment: CrossAxisAlignment.end,
+  //         mainAxisSize: MainAxisSize.min,
+  //         children: <Widget>[
+  //           Text('Following'),
+  //           Container(
+  //             width: 15.0,
+  //           ),
+  //           Text('For you',
+  //               style: TextStyle(
+  //                   fontSize: 17.0, fontWeight: FontWeight.bold))
+  //         ]),
+  //   );
 
   Widget videoViewer(){
 
@@ -50,7 +50,7 @@ class _PinkvillaMainState extends State<PinkvillaMain> {
      child: Center(
         child: StreamBuilder(
           initialData: List<Pinkdata>(),
-          //stream: listVideos,
+          stream: listVideos,
           builder: (BuildContext context, AsyncSnapshot snapshot) {
             if (!snapshot.hasData) return CircularProgressIndicator();  
             List<Pinkdata> videos = snapshot.data;
@@ -111,8 +111,8 @@ class _PinkvillaMainState extends State<PinkvillaMain> {
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
-                VideoDescription(),
-                ActionsToolbar(),
+               VideoDescription(video.user.name.toString(),video.title.toString()),
+               ActionsToolbar(video.likeCount.toString(),video.commentCount.toString(),video.user.headshot),
               ],
           ),
           SizedBox(height: 65)

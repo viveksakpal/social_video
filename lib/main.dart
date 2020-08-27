@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
        return BlocProvider(
       blocs: [
-        Bloc((i) => VideosBloc(VideosAPI())),
+        Bloc((i) => VideosBloc(VideoAPI())),
       ],
       child: 
      MaterialApp(
@@ -27,68 +27,68 @@ class MyApp extends StatelessWidget {
           displayColor: Colors.white
         ),
       ),
-      home: HomePage(),
+      home: PinkvillaMain(),
     )
     );
   }
 }
 
-class HomePage extends StatefulWidget {
-  HomePage({Key key, this.title}) : super(key: key);
-  final String title;
-  @override
-  _HomePageState createState() => _HomePageState();
-}
+// class HomePage extends StatefulWidget {
+//   HomePage({Key key, this.title}) : super(key: key);
+//   final String title;
+//   @override
+//   _HomePageState createState() => _HomePageState();
+// }
 
-class _HomePageState extends State<HomePage> {
-  final title = 'Flutter Demos';
-  @override
-  Widget build(BuildContext context) {
-      return MaterialApp(
-      title: title,
-      home: DefaultTabController(
-        length: 3,
-        child: Scaffold(
-          appBar: AppBar(
-            title: Text(title),
-          ),
-          bottomNavigationBar: new TabBar(
-            tabs: [
-              Tab(
-                icon: new Icon(Icons.home),
-              ),
-              Tab(
-                icon: new Icon(Icons.rss_feed),
-              ),
-              Tab(
-                icon: new Icon(Icons.perm_identity),
-              )
-            ],
-            labelColor: Colors.yellow,
-            unselectedLabelColor: Colors.blue,
-            indicatorSize: TabBarIndicatorSize.label,
-            indicatorColor: Colors.red,
-          ),
-          body: TabBarView(
-            children: [
-              new Container(
-                color: Colors.yellow,
-                child: PinkvillaMain(),
-              ),
-              // Replace with main screen
-              new Container(
-                color: Colors.orange,
+// class _HomePageState extends State<HomePage> {
+//   final title = 'Flutter Demos';
+//   @override
+//   Widget build(BuildContext context) {
+//       return MaterialApp(
+//       title: title,
+//       home: DefaultTabController(
+//         length: 3,
+//         child: Scaffold(
+//           appBar: AppBar(
+//             title: Text(title),
+//           ),
+//           bottomNavigationBar: new TabBar(
+//             tabs: [
+//               Tab(
+//                 icon: new Icon(Icons.home),
+//               ),
+//               Tab(
+//                 icon: new Icon(Icons.rss_feed),
+//               ),
+//               Tab(
+//                 icon: new Icon(Icons.perm_identity),
+//               )
+//             ],
+//             labelColor: Colors.yellow,
+//             unselectedLabelColor: Colors.blue,
+//             indicatorSize: TabBarIndicatorSize.label,
+//             indicatorColor: Colors.red,
+//           ),
+//           body: TabBarView(
+//             children: [
+//               new Container(
+//                 color: Colors.yellow,
+//                 child: PinkvillaMain(),
+//               ),
+//               // Replace with main screen
+//               new Container(
+//                 color: Colors.orange,
                 
-              ),
-              new Container(
-                color: Colors.lightGreen,
-                //child: PinkvillaMain(),
-              )
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+//               ),
+//               new Container(
+//                 color: Colors.lightGreen,
+//                 //child: PinkvillaMain(),
+//               )
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
 

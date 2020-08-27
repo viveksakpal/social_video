@@ -5,7 +5,7 @@ class VideoDescription extends StatelessWidget {
   final videtoTitle;
   final songInfo;
 
-  VideoDescription({this.username, this.videtoTitle, this.songInfo});
+  VideoDescription(this.username, this.videtoTitle, {this.songInfo});
 
   @override
   Widget build(BuildContext context) {
