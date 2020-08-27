@@ -1,6 +1,6 @@
 # social_video_app
 
-A new Flutter project.
+Pinkvilla Demo Flutter project.
 
 ## Getting Started
 
