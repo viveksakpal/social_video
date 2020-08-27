@@ -1,12 +1,9 @@
 abstract class UrlConstants {
-//  static const String TERMS_URI =
-//      "www.vivekSakpal.com/page/tnc";
-//  static const String REGISTRATION = "https://www.vivekSakpal.com";
 
+  //this is constant api endpoint used in networkHelper for rest api calls
+  
   //static String devhost = "https://www.pinkvilla.com/feed/video-test/video-feed.json";
   static String prodhost = "https://www.pinkvilla.com/feed/video-test/video-feed.json";
- // static String resthost = "https://www.pinkvilla.com/feed/video-test/video-feed.json";
   static String host = prodhost;
-  //static String restapi = resthost;
 
 }

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:social_video_app/rest/pinkvillaModel.dart';
 import 'package:social_video_app/screens/pinkvillaUi.dart';
-import 'package:video_player/video_player.dart';
+import 'package:cached_video_player/cached_video_player.dart';
 
+//this video manager is setup for handling video feature
 class VideoManager {
+
   State<PinkvillaMain> state;
   Function updateController;
 
@@ -29,7 +31,7 @@ class VideoManager {
     return listVideos[index];
   }
 
-  VideoPlayerController getController(index) {
+  CachedVideoPlayerController getController(index) {
     return listVideos[index].controller;
   }
 
@@ -62,8 +64,8 @@ class VideoManager {
     }
   }
 
-  Future<VideoPlayerController> createController(url) async {
-    VideoPlayerController controller = VideoPlayerController.network(url);
+  Future<CachedVideoPlayerController> createController(url) async {
+    CachedVideoPlayerController controller = CachedVideoPlayerController.network(url);
     await controller.initialize();
     controller.setLooping(true);
     return controller;

@@ -4,6 +4,8 @@ import 'package:dio/dio.dart' as prefix0;
 import 'package:http/http.dart';
 import 'error_Model.dart';
 
+//this NetworkResult class is used to test success and failure rest calls
+
 class NetworkResult<T> {
   int code;
   STATUS status;

@@ -1,42 +1,54 @@
 PODS:
+  - cached_video_player (0.0.1):
+    - Flutter
+    - KTVHTTPCache (~> 2.0.0)
+  - CocoaAsyncSocket (7.6.4)
   - Flutter (1.0.0)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - KTVCocoaHTTPServer (1.0.0):
+    - CocoaAsyncSocket
+  - KTVHTTPCache (2.0.1):
+    - KTVCocoaHTTPServer
   - path_provider (0.0.1):
     - Flutter
   - sqflite (0.0.1):
     - Flutter
     - FMDB (~> 2.7.2)
-  - video_player (0.0.1):
-    - Flutter
 
 DEPENDENCIES:
+  - cached_video_player (from `.symlinks/plugins/cached_video_player/ios`)
   - Flutter (from `Flutter`)
   - path_provider (from `.symlinks/plugins/path_provider/ios`)
   - sqflite (from `.symlinks/plugins/sqflite/ios`)
-  - video_player (from `.symlinks/plugins/video_player/ios`)
 
 SPEC REPOS:
   trunk:
+    - CocoaAsyncSocket
     - FMDB
+    - KTVCocoaHTTPServer
+    - KTVHTTPCache
 
 EXTERNAL SOURCES:
+  cached_video_player:
+    :path: ".symlinks/plugins/cached_video_player/ios"
   Flutter:
     :path: Flutter
   path_provider:
     :path: ".symlinks/plugins/path_provider/ios"
   sqflite:
     :path: ".symlinks/plugins/sqflite/ios"
-  video_player:
-    :path: ".symlinks/plugins/video_player/ios"
 
 SPEC CHECKSUMS:
+  cached_video_player: 449b3d85e95316a0eca125c483f6d9e281ccabc3
+  CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  KTVCocoaHTTPServer: df8d7b861e603ff8037e9b2138aca2563a6b768d
+  KTVHTTPCache: 588c3eb16f6bd1e6fde1e230dabfb7bd4e490a4d
   path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
   sqflite: 4001a31ff81d210346b500c55b17f4d6c7589dd0
-  video_player: 9cc823b1d9da7e8427ee591e8438bfbcde500e6e
 
 PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
 

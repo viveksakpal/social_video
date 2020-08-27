@@ -2,15 +2,8 @@ import 'dart:convert';
 import 'package:social_video_app/rest/pinkvillaModel.dart';
 import 'package:social_video_app/rest/networkHelper.dart';
 import 'package:social_video_app/rest/networkResult.dart';
-// class VideosAPI {
-//     VideosAPI();
-//   var videoList = <Pinkdata>[];
-//   Future<List<Pinkdata>> listFrmJson(List<dynamic> json) async {
-//         return videoList == null ? new List<Pinkdata>() : json.map((
-//         value) => new Pinkdata.fromJson(value)).toList();
 
-//   }
-// }
+// this is videoapi repo for providing data for bloc consumption
 
 class VideoAPI {
   VideoAPI();

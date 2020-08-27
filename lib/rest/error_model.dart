@@ -1,3 +1,7 @@
+
+
+//this ErrorModel Class Is used to test rest api errordata in networResult
+
 class ErrorModel {
   ErrorModel(this.message);
 

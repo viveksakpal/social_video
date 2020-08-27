@@ -1,11 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:video_player/video_player.dart';
+import 'package:cached_video_player/cached_video_player.dart';
 
-
+//this Pinkdata model is used to parse rest api to local objects and 
+//video player implementation
 class Pinkdata {
-  
-  
-  
   String url;
   @JsonKey(name:'comment-count')
   int commentCount;
@@ -16,7 +14,7 @@ class Pinkdata {
   String title;
   User user;
 
-  VideoPlayerController controller;
+  CachedVideoPlayerController controller;
 
   Pinkdata(
       {this.url,
@@ -53,7 +51,7 @@ class Pinkdata {
         value) => new Pinkdata.fromJson(value)).toList();
   }
  setupVideo(){
-    controller = VideoPlayerController.network(url)
+    controller = CachedVideoPlayerController.network(url)
     ..initialize().then((_) {
       controller.setLooping(true);
     });

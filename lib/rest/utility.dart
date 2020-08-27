@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-//import 'package:package_info/package_info.dart';
+
+//this utility is used in networkHelper for getting and managing headers
+// form rest api
 
 class Utility {
   static String convertTimeStampToDate(int timestamp) {
@@ -38,7 +40,7 @@ class Utility {
   }
 
   static String convertTimeStampToTime(int timestamp) {
-//    DateTime date = DateTime.fromMillisecondsSinceEpoch(timestamp, isUtc: true);
+//  DateTime date = DateTime.fromMillisecondsSinceEpoch(timestamp, isUtc: true);
     DateTime date =
     DateTime.fromMillisecondsSinceEpoch(timestamp * 1000, isUtc: false);
     int hour = date.hour;
@@ -99,8 +101,4 @@ class Utility {
       return "0" + minute.toString();
     }
   }
-
-//  static showToast(String message) {
-//    BotToast.showText(contentColor: Colors.black87, text: message);
-//  }
 }

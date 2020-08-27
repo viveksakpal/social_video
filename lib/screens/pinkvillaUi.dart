@@ -3,8 +3,10 @@ import 'package:social_video_app/rest/pinkvillaModel.dart';
 import 'package:social_video_app/rest/videos_api.dart';
 import 'package:social_video_app/widgets/actions_toolbar.dart';
 import 'package:social_video_app/widgets/video_description.dart';
-import 'package:video_player/video_player.dart';
 import 'package:social_video_app/video.bloc.dart';
+import 'package:cached_video_player/cached_video_player.dart';
+
+//this is main Screen for this app
 
 class PinkvillaMain extends StatefulWidget {
   PinkvillaMain({Key key}) : super(key: key);
@@ -97,7 +99,7 @@ class _PinkvillaMainState extends State<PinkvillaMain> {
                 child: SizedBox(
                   width: controller.value.size?.width ?? 0,
                   height: controller.value.size?.height ?? 0,
-                  child: VideoPlayer(controller),
+                  child: CachedVideoPlayer(controller),
                 ),
               )
             )
@@ -122,15 +124,6 @@ class _PinkvillaMainState extends State<PinkvillaMain> {
   Widget get middleSection => Expanded(
     child: videoViewer());
 
-  // Widget screenUI(){
-  //   return Column(
-  //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-  //     children: <Widget>[
-  //       topSection,
-  //       BottomToolbar(clearHistory),
-  //     ],
-  //   );
-  // } 
 
   @override
   Widget build(BuildContext context) {
@@ -143,7 +136,6 @@ class _PinkvillaMainState extends State<PinkvillaMain> {
                 middleSection,
               ],
             ),
-          //screenUI()
         ]
       ),
     );

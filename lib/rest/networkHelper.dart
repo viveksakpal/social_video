@@ -8,6 +8,9 @@ import 'package:flutter/widgets.dart';
 import 'urlConstants.dart';
 import 'utility.dart';
 
+//this NetworkHelper class is consisit of dio and alice library to work with 
+//rest api
+
 class NetworkHelper {
   //static Alice alice;
   static Dio dio;
@@ -165,12 +168,6 @@ class NetworkHelper {
         // Do something with response error
         return e; //continue
       }));
-      /*    dio.interceptors.add(PrettyDioLogger(
-        requestBody: true,
-        compact: false,
-      ));
-       */
-      //dio.interceptors.add(alice.getDioInterceptor());
     }
   }
 }
