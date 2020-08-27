@@ -1,6 +1,9 @@
 # social_video_app
 
-Pinkvilla Demo Flutter project.
+Pinkvilla Social Video Feature.
+Build with :
+Rxdart | Bloc State Management | Cache Video Player | 
+Youtube: https://www.youtube.com/watch?v=5xERAx2xoUw&feature=youtu.be
 
 ## Getting Started
 
